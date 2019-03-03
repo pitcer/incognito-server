@@ -1,5 +1,4 @@
 plugins {
-	java
 	id("org.spongepowered.plugin") version "0.9.0"
 }
 
@@ -15,11 +14,6 @@ repositories {
 dependencies {
 	compileOnly("org.spongepowered:spongeapi:7.1.0")
 	annotationProcessor("org.spongepowered:spongeapi:7.1.0")
-}
-
-tasks.withType<Jar> {
-	archiveBaseName.set(project.property("artifact") as String)
-	archiveClassifier.set(project.name)
 }
 
 sponge {
